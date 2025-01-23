@@ -1,0 +1,94 @@
+<!DOCTYPE html><!-- HTML: بداية مستند HTML -->
+<html lang="ar"> <!-- HTML: تحديد اللغة -->
+<head>
+    <meta charset="UTF-8"> <!-- HTML: تحديد الترميز -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- HTML: جعل الصفحة متجاوبة -->
+    <title>واجهة المربعات التفاعلية</title> <!-- HTML: عنوان الصفحة -->
+    <style>
+
+        /* CSS: تصميم الحاوية والمربعات */
+        body {
+            margin: 0; /* CSS: إزالة الهوامش */
+            display: flex; /* CSS: تفعيل نظام العرض المرن */
+            justify-content: center; /* CSS: محاذاة العناصر أفقياً */
+            align-items: center; /* CSS: محاذاة العناصر عمودياً */
+            height: 100vh; /* CSS: ضبط الارتفاع إلى الشاشة الكاملة */
+            background: linear-gradient(to bottom, #1a1a2e, #16213e); /* CSS: إضافة خلفية متدرجة */
+            font-family: Arial, sans-serif; /* CSS: تحديد خط النص */
+        }
+
+        .container {
+            margin: 100px; /* CSS: ضبط الهوامش */
+            height: 100px; /* CSS: ارتفاع الحاوية */
+            width: 100px; /* CSS: عرض الحاوية */
+            background-color: lightgray; /* CSS: لون الخلفية */
+            display: grid; /* CSS: استخدام الشبكة */
+            grid-template-columns: 33px 33px 33px; /* CSS: أعمدة متساوية */
+            justify-items: center; /* CSS: محاذاة العناصر داخل الشبكة أفقياً */
+            border-radius: 10%; /* CSS: زوايا الحاوية مستديرة */
+            cursor: pointer; /* CSS: مؤشر عند التمرير */
+            transition: 1s; /* CSS: تأثير الانتقال */
+        }
+
+        .app {
+            height: 20px; /* CSS: ارتفاع العنصر */
+            width: 20px; /* CSS: عرض العنصر */
+            background-color: blue; /* CSS: لون الخلفية */
+            border-radius: 20%; /* CSS: زوايا مستديرة */
+            margin-top: 10px; /* CSS: مسافة من الأعلى */
+            transition: 0.5s; /* CSS: تأثير الانتقال */
+        }
+    </style>
+</head>
+<body>
+<div class="container"> <!-- HTML: الحاوية الرئيسية -->
+    <div class="app"></div> <!-- HTML: العنصر الأول -->
+    <div class="app"></div> <!-- HTML: العنصر الثاني -->
+    <div class="app"></div> <!-- HTML: العنصر الثالث -->
+</div>
+
+<script>
+        // JavaScript: إضافة التفاعل
+        const apps = document.querySelectorAll('.app'); // JS: تحديد جميع العناصر
+
+        apps.forEach(app => {
+            app.addEventListener('click', () => { // JS: حدث عند النقر
+                app.style.backgroundColor = 'red'; // JS: تغيير لون العنصر
+                app.style.transform = 'scale(1.5)'; // JS: تكبير العنصر
+
+                setTimeout(() => { // JS: العودة للوضع الطبيعي
+                    app.style.backgroundColor = 'blue'; // JS: إرجاع اللون
+                    app.style.transform = 'scale(1)'; // JS: إرجاع الحجم
+                }, 500); // JS: مدة التأخير نصف ثانية
+            });
+        });
+    </script><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100%;
+            background-color: rgb(14, 4, 4); /* لون الخلفية */
+        }
+        img {
+            display: block;
+            margin: auto;
+            cursor: zoom-in;
+            transition: background-color 300ms;
+        }
+    </style>
+</head>
+<body>
+<img
+        src="C:/Users/hp-link96/Desktop/مجلد جديد/img/image.jpg"
+        alt="Background Image"
+        width="536"
+        height="301">
+</body>
+</html>
+</body><img src="image.jpg" alt="Background Image" width="536" height="301">
+</html>
